@@ -16,7 +16,7 @@ namespace matrix
 template<typename Type>
 Type wrap_pi(Type x)
 {
-#ifdef __PX4_NUTTX
+#if defined(__PX4_NUTTX) || defined(__PX4_QURT)
     if (!isfinite(x)) {
 #else
     if (!std::isfinite(x)) {
