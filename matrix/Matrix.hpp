@@ -406,44 +406,44 @@ public:
         }
     }
 
-    Matrix<Type, M, N> abs()
-    {
-        Matrix<Type, M, N> r;
-        for (size_t i=0; i<M; i++) {
-            for (size_t j=0; j<N; j++) {
-                r(i,j) = Type(fabs((*this)(i,j)));
-            }
-        }
-        return r;
-    }
-
-    Type max()
-    {
-        Type max_val = (*this)(0,0);
-        for (size_t i=0; i<M; i++) {
-            for (size_t j=0; j<N; j++) {
-                Type val = (*this)(i,j);
-                if (val > max_val) {
-                    max_val = val;
-                }
-            }
-        }
-        return max_val;
-    }
-
-    Type min()
-    {
-        Type min_val = (*this)(0,0);
-        for (size_t i=0; i<M; i++) {
-            for (size_t j=0; j<N; j++) {
-                Type val = (*this)(i,j);
-                if (val < min_val) {
-                    min_val = val;
-                }
-            }
-        }
-        return min_val;
-    }
+//     Matrix<Type, M, N> abs()
+//     {
+//         Matrix<Type, M, N> r;
+//         for (size_t i=0; i<M; i++) {
+//             for (size_t j=0; j<N; j++) {
+//                 r(i,j) = Type(fabs((*this)(i,j)));
+//             }
+//         }
+//         return r;
+//     }
+// 
+//     Type max()
+//     {
+//         Type max_val = (*this)(0,0);
+//         for (size_t i=0; i<M; i++) {
+//             for (size_t j=0; j<N; j++) {
+//                 Type val = (*this)(i,j);
+//                 if (val > max_val) {
+//                     max_val = val;
+//                 }
+//             }
+//         }
+//         return max_val;
+//     }
+// 
+//     Type min()
+//     {
+//         Type min_val = (*this)(0,0);
+//         for (size_t i=0; i<M; i++) {
+//             for (size_t j=0; j<N; j++) {
+//                 Type val = (*this)(i,j);
+//                 if (val < min_val) {
+//                     min_val = val;
+//                 }
+//             }
+//         }
+//         return min_val;
+//     }
 
 };
 
